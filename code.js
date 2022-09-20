@@ -1006,8 +1006,8 @@ El tamaño del vector es a elección.
 */
 
 
-/*
 
+/*
 function carga (vec1, vec2){
     for(let i = 0; i < vec1.length; i++){
         let num = parseFloat(prompt(`Ingresar numeros del Primer vector`));
@@ -1036,7 +1036,7 @@ let vecSuma = new Array(3)
 carga(vec1, vec2);
 suma(vec1, vec2, vecSuma);
 
-*/
+/*
 
 function cargarVectores(vec1, vec2) {
 
@@ -1068,3 +1068,558 @@ let vecsuma = new Array(5);
 cargarVectores(vec1, vec2);
 sumarVectores(vec1, vec2, vecsuma);
 imprimirVector(vecsuma);
+
+*/
+
+//=========================================================================          Clases Math       ==============================================================================================================================================================================================================================================================
+/*
+Confeccionar un programa que solicite el ingreso de un número y nos muestre dicho valor elevado a la tercera potencia.
+
+function potencia3De (num){
+    let cubo = Math.pow(num, 3);
+    return document.write(`${num} elevado al cubo = ${cubo}`)
+}
+
+let num = parseInt(prompt("Ingresar cualquier numero"));
+potencia3De(num);
+
+*/
+
+
+/*
+Ingresar por teclado un valor y luego mostrar la raiz cuadrada de dicho valor.
+
+
+function potencia3De (num){
+    let raizCuad = Math.sqrt(num);
+    return document.write(`Raiz cuadrada de ${num} es = ${raizCuad}`)
+}
+
+let num = parseInt(prompt("Ingresar cualquier numero"));
+potencia3De(num);
+*/
+
+//=========================================================================          Clases Strings       ==============================================================================================================================================================================================================================================================
+/*Ingresar una serie de nombres por teclado hasta que se cargue la palabra Fin, y mostrar cuántos nombres se ingresaron. 
+
+function fin(string){
+    
+    let cont = 0;
+    do{
+        let x = prompt("Ingrsa palabras")
+        string = x;
+        cont++
+        document.write(`${string}${"<br>"}`)
+    }while(string != "Fin");
+    cont--                                          //Para descontar la palabra Fin;
+     return document.write("Se obtuvo un numero de " + cont + " Palabras.");
+}
+
+let string;
+string = new Array();
+fin(string)
+*/
+
+//=========================================================================          Clases Strings       ==============================================================================================================================================================================================================================================================
+
+/*Igual al anterior, pero que termine la aplicación sin contemplar mayúsculas ni minúsculas. Es decir que para salir se pueda teclear fin, Fin o FIN. 
+
+
+
+//se transforman todas las palabras ingresadas a mayusculas y el while se detiene cuando lee una palabra FIN. al ser todas las palabras ingresadas en mayusculas, nunca va a tomar minusculas.
+
+
+let nombre;
+let cont = 0;
+do{
+    x = prompt("Ingrese un nombre (Con 'FIN' para el conteo)").toUpperCase();
+    nombre = x;
+    cont++
+    document.write(`${nombre}${"<br>"}`)
+
+}while(nombre != "FIN");
+cont--
+document.write("Se obtuvo un numero de " + cont + " Palabras.");
+*/
+
+//=========================================================================          Clases Strings       ==============================================================================================================================================================================================================================================================
+
+/*Realizar la búsqueda de un string clave en un string fuente. Se deberá ingresar una frase o texto 
+(fuente) y luego la clave a buscar. En caso de encontrarla, imprimir la posición, de lo contrario una leyenda que indique que no está.
+*/
+
+
+/*
+let fuente = prompt("Ingresar una frase de mas de dos palabras.");
+let clave = prompt("Ingrse la palabra que quiera buscar dentro de ese texto.");
+let frase = fuente.indexOf(clave);
+if(frase != -1){
+    document.write(`La palabra "${clave}" se encuentra en el texto "${fuente}" ${"<br>"}`);
+}else{
+    document.write(`No se encontro la Palabra "${clave}" dentro del texto "${fuente}"`)
+}*/
+
+//=========================================================================          Clases Strings       ==============================================================================================================================================================================================================================================================
+/*Ingresar una palabra o texto por teclado y 
+determinar si es o no una palabra palíndromo. (Palabra que se lee de igual manera de 
+    adelante hacia atrás, que de atrás hacia delante) */
+
+
+
+
+
+//=========================================================================          Clases Strings   email    ==============================================================================================================================================================================================================================================================
+
+    /*Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene cargado el carácter @. 
+
+    function arroba (email){
+            let buscar = email.indexOf("@")
+            if (buscar != -1){
+                return document.write("Se ingreso el arroba")
+            }else{
+                return document.write("Ingrese el valor @")
+            }
+    }
+
+let email = prompt("Ingresar email.")
+arroba(email);
+*/
+//=========================================================================          Clases Strings   email    ==============================================================================================================================================================================================================================================================
+
+/*
+Cargar un String por teclado e implementar las siguientes funciones:
+a) Imprimir la primera mitad de los caracteres de la cadena.                        Listo   
+b) Imprimir el último carácter.                                                     Listo 
+c) Imprimirlo en forma inversa.                                                     Listo
+d) Imprimir cada carácter del String separado con un guión.                         Listo
+e) Imprimir la cantidad de vocales almacenadas.                                     Listo
+*/
+/*
+
+function primerMitad(string){
+    let mitad = string.substring(0, (string.length/2))
+    return document.write(`La mitad de los caracteres es = ${mitad}`)
+}
+
+
+//Encontrar el ultimo caracter del string.
+function ultCaract (string){
+    let ultimo = string.at(-1);
+    return document.write(`El ultimo caracter es = ${ultimo}${"<br>"}`);
+}
+
+//invertir string
+function invertir (string){
+// Paso 1. Usar el método split() para devolver un nuevo arreglo
+    let convArr = string.split("");
+    // ["h", "o", "l", "a"]
+//paso 2. invertir valores del array, invirtiendo todas las letras.
+    let invertArr = convArr.reverse();
+//paso 3. Convertir array a string devuelta
+    let convertString = invertArr.join("");
+//Paso 4. retornar array invertido
+    return document.write(`Aqui esta el texto invertido = (${convertString})${"<br>"}`);
+}
+
+//Funcion, Ingresar guiones
+function guion (string){
+    let convertArray = string.split("");
+    let ingresaGuion = convertArray.join("-");
+    return document.write(ingresaGuion + "<br>");
+}
+
+
+function vocales (string){
+    let strArray = string.split("");
+    let cont = 0;
+    for(let i = 0; i < strArray.length; i++){
+        if(strArray[i] === "a" || strArray[i] === "e" || strArray[i] === "i" || strArray[i] === "o" || strArray[i] === "u"){
+            cont++;
+        }
+    }return document.write(`La cantidad de vocales almacenadas es de = ${cont}${"<br>"}`);
+}
+
+let string = prompt("ingresar palabra");
+ultCaract(string);
+invertir(string);
+guion(string);
+vocales(string);
+primerMitad(string);
+
+
+
+*/
+//=========================================================================          Clases Strings   email    ==============================================================================================================================================================================================================================================================
+/*Codifique un programa que permita cargar una oración por teclado, luego mostrar cada palabra ingresada en una línea distinta.
+
+Por ejemplo si cargo:
+	La mañana está fría.
+Debe aparecer:
+La
+mañana
+está
+fría
+*/
+
+
+/*
+function dividirFrase(arg){
+    let arr = arg.split(" ");
+    let str = arr.join("<br>");
+    return document.write(str);
+}
+
+
+let frase = prompt("")
+dividirFrase(frase);
+*/
+
+//=========================================================================     Formuñarios y Eventos    ==============================================================================================================================================================================================================================================================
+/*Crear un formulario con tres botones con las leyendas "1", "2" y "3". Mostrar un mensaje indicando qué botón se presionó. 
+function click1(){
+    alert("Se eligio el boton 1")
+
+}
+function click2(){
+    alert("Se eligio el boton 2")
+
+}
+function click3(){
+    alert("Se eligio el boton 3")
+}
+*/
+//=========================================================================    FORM, BUTTON y TEXT.   ==============================================================================================================================================================================================================================================================
+/*
+    Crear un programa que permita cargar un entero en un text y al presionar un botón nos muestre 
+    dicho valor elevado al cubo (emplear la función alert).
+
+
+function calcularCubo(){
+    let valor = document.getElementById("num").value;
+    v = parseInt(valor)
+    cubo = v * v * v;
+    alert("El valor es = " + cubo);
+}
+*/
+//=========================================================================    FORM, BUTTON y TEXT.   ==============================================================================================================================================================================================================================================================
+/*
+    Cargar dos números en objetos de tipo text y al presionar un botón, mostrar el mayor.
+
+function mayor(){
+    let x = document.getElementById("text1").value;
+    let y = document.getElementById("text2").value;
+    let num1 = parseInt(x);
+    let num2 = parseInt(y);
+
+    if(num1 > num2){
+        alert(`${num1} Es mayor que ${num2}`);
+    }else if(num1 < num2){
+        alert(`${num1} Es menor que ${num2}`);
+    }else{
+        alert(`${num1} Es igual que ${num2}`);
+    }
+}
+
+*/
+//=========================================================================    FORM, BUTTON y TEXT.   ==============================================================================================================================================================================================================================================================
+/*
+    Cargar un nombre y un apellido en sendos text. Al presionar un botón, concatenarlos y mostrarlos 
+    en un tercer text (Tener en cuenta que podemos modificar la propiedad value de un objeto 
+        TEXT cuando ocurre un evento)
+function concat(){
+    let nombre =  document.getElementById("texto1").value;
+    let apellido = document.getElementById("texto2").value;
+    document.getElementById("texto3").value = nombre.concat(" " +apellido);
+ 
+}
+*/
+
+//=========================================================================    FORM, BUTTON y TEXT.   ==============================================================================================================================================================================================================================================================
+
+
+// function puzzle (n){
+//     //planteo las variables a,b,c y d = 1
+//     let a = 1;
+//     let b = 1;
+//     let c = 1;
+//     let d = 1;
+//     for(let i = 0; i < n; i++){
+//         let x = d + (2 * c) + (3 * b) + (4 * a);
+//         a = b
+//         b = c
+//         c = d
+//         d = x
+//     }
+//     let f = (d % 10000000000);
+//     return document.write(f)
+// }
+
+// puzzle(100)
+
+//4315102208   
+// let n = 4315102208
+// let porDiez = n * 10;
+// document.write(n * 10);
+// //43151022080 
+// let elevado100 = Math.pow(porDiez, 100)
+
+//=========================================================================    Password   ==============================================================================================================================================================================================================================================================
+/*Disponer dos campos de texto tipo password. Cuando se presione un botón mostrar si las dos claves ingresadas son iguales o no (es muy común solicitar al operador el ingreso de dos veces de su clave para validar si las escribió correctamente, esto se hace cuando se crea una password para el ingreso a un sitio o para el cambio de una existente).
+Tener en cuenta que podemos emplear el operador == para ver si dos string son iguales.
+function validar(){
+    let clave1 = document.getElementById("clave1").value;
+    let clave2 = document.getElementById("clave2").value;
+
+    if(clave1 === clave2){
+        return alert("Claves Validadas");
+    }else if(clave1 !== clave2){
+        return alert("Claves Incorrectas")
+    }
+}*/
+
+//=========================================================================   DOM select   ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas 
+(Jamón y Queso, Muzzarella, Morrones). 
+Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma. 
+
+function selected(){
+    let select = document.getElementById("pizzas");
+    document.getElementById("text").value = select.options[select.selectedIndex].value;
+}
+
+
+
+<form action="#">
+    <select name="Pizzas" id="pizzas" onchange="selected()">
+        <option value="Pizzas" selected hidden>Seleccionar Pizzas</option>
+        <option value="180">Jamón y Queso</option>
+        <option value="200">Muzzarella</option>
+        <option value="400">Morrones</option>
+
+        <input type="text" name="text" id="text" placeholder="Precios" readonly>
+    </select>
+</form>
+*/
+//=========================================================================   DOM select   ==============================================================================================================================================================================================================================================================
+
+
+/*
+Generar un presupuesto de un equipo de computación a partir de tres 
+objetos de tipo SELECT que nos permiten seleccionar:
+Procesador (Intel I3 - $400, Intel I5 $600, Intel I7 $800).
+Monitor (Samsung 20' - $250, Samsung 22' - $350, Samsung 26' - $550)
+Disco Duro(500 Gb - $300, 1 Tb - $440, 3 Tb - $500)
+Para cada característica indicamos string a mostrar (Ej. Intel I3) y el valor 
+asociado a dicho string (Ej. 400).
+Al presionar un botón "Calcular" mostrar el presupuesto en un objeto de tipo TEXT. 
+
+function total(){
+    let elem1 = document.getElementById("procesador");
+    let precio1 = elem1.options[elem1.selectedIndex].value;
+    let elem2 = document.getElementById("monitor");
+    let precio2 = elem2.options[elem2.selectedIndex].value;
+    let elem3 = document.getElementById("discoduro");
+    let precio3 = elem3.options[elem3.selectedIndex].value;
+    precio1 = parseInt(precio1);
+    precio2 = parseInt(precio2);
+    precio3 = parseInt(precio3);
+    let suma = precio1 + precio2 + precio3;
+    document.getElementById("total").value = suma;
+}
+<form>
+    <select id="procesador">
+        <option value="300">Intel I3</option>
+        <option value="200">Intel I7</option>
+        <option value="500">Intel I5</option>
+    </select>
+    <select id="monitor">
+        <option value="300">Samsung 22'</option>
+        <option value="200">Samsung 21'</option>
+        <option value="500">Samsung 26'</option>
+    </select>
+    <select id="discoduro">
+        <option value="300">1 Tb</option>
+        <option value="200">3 Tb</option>
+        <option value="500">5 Tb</option>
+    </select>
+<br>
+    <a href="#" onclick="total()">Calcular costos</a>
+<p>Total:</p>
+    <input type="text" id="total">
+</form>
+*/
+
+//=========================================================================   DOM select   ==============================================================================================================================================================================================================================================================
+
+/*
+1function elegir(){
+    let pizza = document.getElementById("pizzas");
+    
+    let precioQueso = pizza.options[pizza.selectedIndex].value;
+    let precioJamon = pizza.options[pizza.selectedIndex].value;
+    let precioEsp = pizza.options[pizza.selectedIndex].value;
+
+    let cant1 = document.getElementById("stock1").value;
+    let cant2 = document.getElementById("stock2").value;
+    let cant3 = document.getElementById("stock3").value;
+    
+    precioQueso = parseInt(precioQueso)
+    precioJamon = parseInt(precioJamon)
+    precioEsp = parseInt(precioEsp)
+    
+    let result1 = (precioQueso * cant1) + (precioJamon * cant2) + (precioEsp * cant3);
+
+    document.getElementById("total").value = result1
+}
+<form>
+    <select id="pizzas">
+        <option value="4">Pizza de Queso</option>
+
+        <option value="6">Pizza de Jamon y Queso</option>
+
+        <option value="10">Pizza Especial</option>
+    </select>
+
+    <input type="number" id="stock1" value="0">
+    <input type="number" id="stock2" value="0">
+    <input type="number" id="stock3" value="0">
+
+    <a href="#" id="costos" onclick="elegir()">Costos totales</a>
+    <p><input type="number" id="total"></p>
+</form>
+*/
+
+//=========================================================================   DOM select   ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página que permita tomar un examen múltiple choice. 
+Se debe mostrar una pregunta y seguidamente un objeto SELECT con las respuestas posibles. 
+Al presionar un botón mostrar la cantidad de respuestas correctas e incorrectas 7
+(Disponer 4 preguntas y sus respectivos controles SELECT) 
+
+function respuetas(){
+    let correctas = 0;
+    let incorrectas = 0;
+    let preg1 = document.getElementById("preg1");
+    let preg2 = document.getElementById("preg2");
+    let preg3 = document.getElementById("preg3");
+
+
+    if(preg1.options[preg1.selectedIndex].value == 4){
+        correctas++
+    }
+    if(preg2.options[preg2.selectedIndex].value == 2){
+        correctas++
+    }
+    if(preg3.options[preg3.selectedIndex].value == 1){
+        correctas++
+    }
+    alert("Respuestas Correctas = " + correctas)
+
+    if(preg1.options[preg1.selectedIndex].value != 4){
+        incorrectas++
+    }
+    if(preg2.options[preg2.selectedIndex].value != 2){
+        incorrectas++
+    }
+    if(preg3.options[preg3.selectedIndex].value != 1){
+        incorrectas++
+    }
+    alert("Respuestas Incorrectas = " + incorrectas)
+}
+
+<form>
+    <p>¿El cielo de que color es?</p>
+    <select id="preg1">
+        <option value="1">Color naranja</option>
+        <option value="2">Color Rojo</option>
+        <option value="3">Color verde</option>
+        <option value="4">Color azul</option>
+    </select>
+    <p>Como se llamaba mi perro?</p>
+    <select id="preg2">
+        <option value="1">Noviembre</option>
+        <option value="2">Lucho</option>
+        <option value="3">Fernando</option>
+        <option value="4">Rogelio</option>
+    </select>
+    <p>Cuantos años tengo?</p>
+    <select id="preg3">
+        <option value="1">21</option>
+        <option value="2">20</option>
+        <option value="3">22</option>
+        <option value="4">19</option>
+    </select>
+    <br><br>
+    <a href="#" onclick="respuetas()">Enviar respuestas</a>
+
+</form>
+*/
+//=========================================================================   DOM checkbox   ==============================================================================================================================================================================================================================================================
+
+/*Confeccionar una página que muestre tres checkbox que permitan seleccionar 
+los deportes que practica el usuario 
+(Fútbol, Básket, Tenis) Mostrar al presionar un botón los deportes que eligió.
+function deportes(){
+    let futbol = document.getElementById("item1").checked; //checked es "true"
+    let bascket = document.getElementById("item2").checked;
+    let tenis = document.getElementById("item3").checked;
+
+    if(futbol){
+        alert("Se eligio Futbol");
+    }
+    if(bascket){
+        alert("Se eligio bascket")
+    }
+    if(tenis){
+        alert("Se eligio tenis")
+    }
+}
+
+    <form>
+        <label for="item1">Fútbol</label>
+        <input type="checkbox" id="item1">
+        <label for="item1">Básket</label>
+        <input type="checkbox" id="item2">
+        <label for="item1">Tenis</label>
+        <input type="checkbox" id="item3">
+        
+        <a href="#" onclick="deportes()">Enviar</a>
+    </form>
+*/
+//=========================================================================   DOM checkbox   ==============================================================================================================================================================================================================================================================
+/*
+function validar(){
+    let mayor = document.getElementById("si").checked;
+    if(mayor){
+        alert("Muchas gracias por confirmar su edad, Bienvenido")
+    }else{
+        alert("Eres menor de edad")
+    }
+}
+
+<form>
+<p>Eres mayor de 18 años?</p>
+<label for="si">Si soy mayor de 18 años</label>
+<input type="radio" name="edad" id="si">
+<br>
+<label for="no">No, no soy mayor de 18 años</label>
+<input type="radio" name="edad" id="no">
+<br>
+<br>
+<a href="#" onclick="validar()">Enviar Formulario</a>
+
+</form>
+*/
+
+//=========================================================================   DOM textArea   ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página de visitas a un sitio, solicitar ingresar el 
+nombre de una persona, su mail y los comentarios 
+(TEXTAREA). Mostrar luego llamando a la función alert los datos ingresados.
+
+function enviar(){
+    let nombre = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let descr = document.getElementById("textarea").value;
+    
+    alert(`El nombre es = ${nombre}, Su email es = ${email}, Los comentarios son = ${descr}`)
+}
+*/
