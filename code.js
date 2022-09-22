@@ -1622,4 +1622,246 @@ function enviar(){
     
     alert(`El nombre es = ${nombre}, Su email es = ${email}, Los comentarios son = ${descr}`)
 }
+
+
+<form>
+    <input type="text" name="nombre" id="name" placeholder="Ingrese nombre">
+
+    <input type="email" name="email" id="email" placeholder="Ingrese email">
+<br>
+    <textarea name="" id="textarea" cols="30" rows="10" placeholder="Ingresar una breve reseña"></textarea>
+<br>
+    <a href="#" onclick="enviar()">Enviar</a>
+</form>
+
 */
+
+//=========================================================================   DOM onFocus y onBlur   ==============================================================================================================================================================================================================================================================
+/*Solicitar que se ingrese el nombre y la clave de un usuario. 
+Mostrar una ventana de alerta si en la clave se 
+ingresan menos de 7 caracteres o más de 20 (capturar el evento onBlur)  
+
+function verificar(control){
+    if(control.value.length < 7){
+        alert("Le falta completar")
+    }
+    else if(control.value.length > 20){
+        alert("Se exedio de caracteres")
+    }
+}
+
+<form>
+<input type="text" id="nombre" onblur="verificar(this)" value="nombre"><br>
+<input type="text" id="edad" onblur="verificar(this)" value="mail">
+<br>
+<input type="button" value="Confirmar">
+
+</form>
+*/
+
+//=========================================================================   DOM onFocus y onBlur   ==============================================================================================================================================================================================================================================================
+
+
+/*Implementar un formulario que solicite la carga del nombre y la edad de una persona. Cuando el control tome foco borrar el contenido actual. Mostrar en las propiedades value de los controles text los mensajes "nombre" y "mail" respectivamente.
+<form>
+<input type="text" id="nombre" onFocus="vaciar(this)" value="nombre"><br>
+<input type="text" id="edad" onFocus="vaciar(this)" value="mail">
+<br>
+<input type="button" value="Confirmar">
+
+<script>
+    function vaciar(control) {
+        control.value = '';
+    }
+
+    function verificarEntrada(control) {
+        alert('ingreso:' + control.value);
+    }
+</script>
+
+</form>
+*/
+//=========================================================================   DOM onload   ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página que muestre un
+ mensaje con la función alert inmediatamente después que se cargue. 
+
+ function activar(){
+    alert("esta activa")
+ }
+ */
+
+ //=========================================================================   OBJETO WINDOW   ==============================================================================================================================================================================================================================================================
+
+
+ /*
+    <p>Este programa permite analizar la llamada a distintas responsabilidades del objeto window.</p>
+    <form>
+        <br>
+        <input type="button" value="open()" onClick="abrir()">
+        <br>
+        <input type="button" value="open con parámetros" onClick="abrirParametros()">
+        <br>
+        <input type="button" value="alert" onClick="mostrarAlerta()">
+        <br>
+        <input type="button" value="confirm" onClick="confirmar()">
+        <br>
+        <input type="button" value="prompt" onClick="cargarCadena()">
+    </form>
+
+    <script>
+        function abrir() {
+            let ventana = open();
+            ventana.document.write("Estoy escribiendo en la nueva ventana<br>");
+            ventana.document.write("Segunda linea");
+        }
+
+        function abrirParametros() {
+            let ventana = open('', '', 'status=yes,width=400,height=250,menubar=yes');
+            ventana.document.write("Esto es lo primero que aparece<br>");
+        }
+
+        function mostrarAlerta() {
+            alert("Esta ventana de alerta ya la utilizamos en otros problemas.");
+        }
+
+        function confirmar() {
+            let respuesta = confirm("Presione alguno de los dos botones");
+            if (respuesta == true)
+                alert("presionó aceptar");
+            else
+                alert("presionó cancelar");
+        }
+
+        function cargarCadena() {
+            let cad = prompt("cargue una cadena:");
+            alert("Usted ingreso " + cad);
+        }
+    </script>
+    */
+    //=========================================================================   OBJETO WINDOW OPEN() ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página que permita abrir otra ventana cuando se presiona un botón. Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles. 
+    function abrir(){
+    let ventana = open('','','width=600,height=300');
+    ventana.document.write("Escribo en otra ventana")
+}
+<input type="button" onclick="abrir()"></input>
+*/
+    //=========================================================================   OBJETO WINDOW  LOCATION  ==============================================================================================================================================================================================================================================================
+/*Confeccionar una página que tenga un botón. Cuando se presione dicho botón 
+generar un valor aleatorio entre 0 y 2. Si se genera el 0 llamar al webmail de 
+Outlook, si se genera un 1 llamar a gmail en caso de generarse un 2 llamar a yahoo.
+Para generar un valor aleatorio utilizar la función random del objeto Math. 
+
+function enviar(){
+    let num = Math.random()
+    num = parseInt(num * 3)
+    if(num === 0){
+        window.location = "https://www.microsoft.com";
+        }else if(num === 1){
+        window.location = "https://mail.google.com";
+    }else{
+        window.location = "https://login.yahoo.com";
+    }
+}
+*/
+
+//=========================================================================   OBJETO WINDOW  HISTORY ==============================================================================================================================================================================================================================================================
+
+/*
+window.history.back();    //Retrocede a la página anterior
+window.history.forward(); //Avanza a la página siguiente almacenada en la 
+                            cache de la máquina.
+window.history.go();  //Avanza o retrocede en la lista de páginas visitadas.
+
+*/
+//=========================================================================   OBJETO WINDOW  SCREEN ==============================================================================================================================================================================================================================================================
+/*document.write(
+`   availWidth = ${screen.availWidth}${"<br>"}
+    availHeight = ${screen.availHeight} ${"<br>"}
+    height = ${screen.height} ${"<br>"}
+    width = ${screen.height}${"<br>"}
+    colorDeph = ${screen.colorDepth}
+  
+`
+
+);
+
+Confeccionar un programa que al presionar un botón aparezca una ventana 
+que ocupe todo el ancho del monitor y la mitad de su altura. 
+
+function enviar(){
+
+    open("", "", `width=${screen.width},height=${screen.height/2}`);
+}
+*/
+//=========================================================================   OBJETO WINDOW  NAVEGATOR ==============================================================================================================================================================================================================================================================
+/*
+
+appName : almacena el nombre oficial del navegador.
+appVersion : almacena la versión del navegador.
+cookieEnabled : almacena si las cookies están activas en el navegador.
+platform : almacena la plataforma donde el navegador se está ejecutando.
+plugins : almacena un array de los plugin cargados en el navegador.
+
+
+document.write('Valores de las propiedades del objeto navigator:<br>');
+document.write('appName :' + navigator.appName + '<br>');
+document.write('appVersion :' + navigator.appVersion + '<br>');
+document.write('cookieEnabled :' + navigator.cookieEnabled + '<br>');
+document.write('plugins :' + navigator.plugins.length + '<br>');
+
+*/
+
+//========================================================================= ==============================================================================================================================================================================================================================================================
+/*
+function fecha(){
+    let fecha = new Date();
+    document.write(`hoy es ${fecha.getDay()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`)
+}   
+*/
+
+
+
+//========================================================================= CLASES ==============================================================================================================================================================================================================================================================
+/*Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) 
+y tres métodos: cargarvalor1, cargarvalor2 y retornarresultado. Implementar 
+la clase suma.
+La definición de un objeto de la clase que deben plantear es:
+
+let s=new suma();
+s.primerValor(10);
+s.segundoValor(20);
+document.write('La suma de los dos valores es:'+s.retornarResultado());
+
+
+function suma (valor1, valor2){
+    this.valor1 = valor1;
+    this.valor2 = valor2;
+    this.cargarValor1 = function num1(valor){
+        this.valor1 = valor;
+    }
+    this.cargarValor2 = function num2(valor){
+        this.valor2 = valor;
+    }
+    this.retornResult =     function retornResult(){
+        let resultado =  this.valor1 + this.valor2;
+        return resultado;
+    }
+}
+let s;
+s = new suma(20, 30);
+document.write(`El resultado es = ${s.retornResult()}`);
+
+s.cargarValor1(2);
+s.cargarValor2(2);
+document.write(`El resultado es = ${s.retornResult()}`);
+*/
+//========================================================================= CLASES ==============================================================================================================================================================================================================================================================
+
+/*Plantear una clase persona (que permita cargar por teclado su nombre y edad).
+Por otro lado crear una clase empresa que tenga como atributo la edad tope 
+para que una persona pueda ingresar como trabajador en la misma (60 años)
+Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la 
+clase persona y 1 de la clase empresa. Mostrar cuántas de esas personas 
+están inhabilitadas para ingresar como trabajadores de acuerdo a la edad tope.  */
+
