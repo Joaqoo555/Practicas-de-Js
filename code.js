@@ -1863,5 +1863,392 @@ Por otro lado crear una clase empresa que tenga como atributo la edad tope
 para que una persona pueda ingresar como trabajador en la misma (60 años)
 Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la 
 clase persona y 1 de la clase empresa. Mostrar cuántas de esas personas 
-están inhabilitadas para ingresar como trabajadores de acuerdo a la edad tope.  */
+están inhabilitadas para ingresar como trabajadores de acuerdo a la edad tope.  
 
+//Clase persona.
+function Persona(nombre, edad){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.cargEdad = function(){
+        this.edad = parseInt(prompt("Ingresa Tu edad"));
+    }
+    this.cargNombre = function(){
+        this.nombre = prompt("Ingresa tu nombre");
+    }
+}
+
+function Empresa(){
+    this.edad = 60;
+}
+function validar(a, b, c){
+    if(a < b){
+        document.write(`${c} Puede ingresar a la empresa como empleado ${"<br>"}`);
+    }else{
+        document.write(`${c} Es mayor de edad y no se aceptan personas mayores de ${condicionesDeEmpresa.edad}${"<br>"}`);
+    }
+}
+const pers1 = new Persona();
+const pers2 = new Persona();
+const pers3 = new Persona();
+const condicionesDeEmpresa = new Empresa();
+
+pers1.cargNombre();
+pers1.cargEdad();
+pers2.cargNombre();
+pers2.cargEdad();
+pers3.cargNombre();
+pers3.cargEdad();
+
+validar(pers1.edad, condicionesDeEmpresa.edad, pers1.nombre);
+validar(pers2.edad, condicionesDeEmpresa.edad, pers2.nombre);
+validar(pers3.edad, condicionesDeEmpresa.edad, pers3.nombre);
+*/
+//========================================================================= Array compuesto de objetos ==============================================================================================================================================================================================================================================================
+/*Confeccionar una clase persona que permita almacenar el nombre y la edad. 
+Luego definir un vector de 4 componentes de tipo persona. Imprimir el nombre de la persona de mayor edad; 
+decir también si hay más de una persona con la edad mayor. 
+
+class Persona{
+    constructor (nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.imprimir = function imprimir(){
+            document.write(`${this.nombre}, Tiene una edad de ${this.edad} años ${"<br>"}`)
+        }
+    }
+
+}
+
+let myArray = []
+myArray.push (new Persona("Joaquin", 23), new Persona("Tiziano", 40), new Persona("Gabriel", 25), new Persona("Sol", 50)); 
+
+let v = 0;
+for(let i = 0; i < myArray.length; i++){
+    if(myArray[i].edad >= 40){
+        v++
+    }
+    myArray[i].imprimir()
+}
+let newArray = []
+for (let i = 0; i < myArray.length; i++) {  
+    newArray.push(myArray[i].edad);
+}
+let personasMasGrandes = Math.max(...newArray);
+
+for (let i = 0; i < myArray.length; i++) {
+    if(myArray[i].edad === personasMasGrandes){
+        document.write(`El nombre de la persona mas grande es ${myArray[i].nombre}${"<br>"}`)
+    }
+}
+
+document.write(`Hay una cantidad de ${v} personas que son mayores de edad. ${"<br>"}`);
+
+
+*/
+//========================================================================= Objetos Literales ==============================================================================================================================================================================================================================================================
+/*
+Crear un objeto que represente los datos de un participante de un juego. Definir las propiedades
+
+ nombre
+ puntos
+
+y los métodos:
+
+imprimir (mostrar el nombre de jugador y los puntos actuales)
+aumentarPuntos (permite incrementar la cantidad de puntos actuales del jugador)
+verificarSiGano (mostrar un mensaje si los puntos superan a 1000)
+
+
+let juagador = {
+    nombre: "Joaquin",
+    puntos: 0,
+    imprimir: function(){
+        document.write(`Nombre del Jugador = ${this.nombre}${"<br>"}Puntos del jugador = ${juagador.puntos}${"<br>"} Para ganar el juego debera de sumarle puntos a su jugador hasta el punto de llegar a 1000${"<br>"}`)
+    },
+    sumarPuntos: function(puntos){
+        this.puntos = this.puntos + puntos;
+    },
+    imprActua: function(){
+        document.write(`Puntos del jugador actuales = ${juagador.puntos}${"<br>"}`);
+
+    }
+}
+
+juagador.imprimir();
+do{
+    juagador.sumarPuntos(parseInt(prompt("Ingrsa los puntos a sumar")));
+    juagador.imprActua();
+}while( juagador.puntos < 999);
+
+document.write("Felicidades haz ganado");
+
+*/
+
+//========================================================================= Arrays Diferentes formas de crearlos ==============================================================================================================================================================================================================================================================
+/*
+//arrays indefinidos:
+let array = new Array();
+
+let array2 = [];
+
+//Arrays definidos:
+let array3 = new Array(20);
+array3;
+//Creación e inicialización llamando al constructor Array y pasando como parámetros los valores a almacenar en las componentes:
+let array4 = new Array(14.3, "juan");
+
+//creacion e inicializacion por medio de corchetes;
+let array5 = [14.3, "juan"];
+
+function imprimirArray(array){
+    for(let i = 0; i < array1.length; i++){
+        document.write(array[i] +"<br>"); 
+    }
+}
+
+
+let array1 = ["lunes", "martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+let array2 = new Array("lunes", "Martes", "Miercoles", "Jueves", "viernes", "Sabado", "Domingo");
+
+imprimirArray(array1);
+imprimirArray(array2);
+*/
+//========================================================================= Arrays ==============================================================================================================================================================================================================================================================
+
+/*Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. 
+Luego crear otros dos vectores y copiar los elementos menores a 250 en el segundo vector y los mayores o 
+iguales a 250 en el tercer vector. 
+Imprimir los tamaños del segundo y tercer vector. Imprimir los tres vectores.
+
+let array1 = [];
+for (let i = 0; i < 10; i++) {
+    array1[i] = parseInt(1 + Math.random() * 500);
+}
+let minArray = [];
+let indice1 = 0;
+let maxArray = [];
+let indice2 = 0;
+
+
+for(let i = 0; i < array1.length; i++){
+    if(array1[i] >= 250){
+        maxArray[indice1] = array1[i];
+        indice1++
+    }else if(array1[i] < 250){
+        minArray[indice2] = array1[i];
+        indice2++
+    }
+}
+
+document.write(`El tamaño del Segundo vector es = ${maxArray.length}${"<br>"} El tamaño del Tercer vector es = ${minArray.length}
+${"<br>"} Contendor del Segundo Array = ${maxArray}
+${"<br>"} Contendor del Tercer Array = ${minArray}`)
+*/
+//========================================================================= Arrays no densos o dispersos ==============================================================================================================================================================================================================================================================
+
+/*Crear un vector disperso que representen premios de una rifa. Listo
+Las posiciones indican los números que tienen premio. lsito
+Almacenar en dichas posiciones los premios. 
+Genera 10 premios con los montos 1000,2000,3000 etc.
+La cantidad de números de la rifa son 1000.
+Generar valores aleatorios para los números con premio.
+Imprimir Los números con premio y los montos de los mismos.
+
+let carton = [];
+let cant = 0;
+
+do{
+    let premio =  parseInt(Math.random() * 1000)
+    carton[premio] = 1000 * (cant + 1);
+    cant++
+
+}while(cant != 11)
+for(let i = 0; i < carton.length; i++){
+    if(carton[i] != undefined){
+        document.write("El numero ganadore es " + i + "=" + carton[i] + "<br>")
+    }
+}
+*/
+//========================================================================= Arrays push()/pop() ==============================================================================================================================================================================================================================================================
+/*Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000. 
+Luego extraer los dos últimos elementos sumarlos y mostrarlos. Imprimir también el tamaño final del vector. 
+
+let array = [];
+do{
+    let numAleatorio = parseInt(1+ Math.random() * 1000)
+    array.push(numAleatorio)
+}while(array.length < 5);
+document.write(array + "<br>")
+
+let suma = [];
+do{
+    suma.push(array.pop());
+    
+}while(array.length > 3);
+
+
+
+let total = 0;
+for(let i = 0; i < suma.length; i++){
+    total = suma[i] + total;
+}
+document.write(total)*/
+
+//========================================================================= Arrays Sort() reverse() ==============================================================================================================================================================================================================================================================
+/*Ordenar elementos de a - z;
+
+let nombres = ['marcos', 'ana', 'luis', 'jorge', 'carlos'];
+        document.write('Vector antes de ordenarlo<br>');
+        for (let f = 0; f < nombres.length; f++) {
+            document.write(nombres[f] + '<br>');
+        }
+        nombres.sort();
+        document.write('Vector después de ordenarlo<br>');
+        for (let f = 0; f < nombres.length; f++) {
+            document.write(nombres[f] + '<br>');
+        }
+*/
+/*
+        //Ordenar elementos numericos de menor a mayor
+                let vec = [100, 5, 60, 3, 90];
+        document.write('Vector antes de ordenarlo<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+        vec.sort(function(v1, v2) {
+            if (v1 < v2)
+                return -1; // v1 es menor que v2
+            else
+                return 1; // v1 es mayor que v2
+        });
+        document.write('Vector después de ordenarlo<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+        */
+
+        /*Cargar los sueldos de un conjunto de empleados. 
+        Finalizar la carga al ingresar cero. 
+        Mostrar por pantalla los sueldos ordenados de mayor a menor. 
+
+        let sueldoEmpleados = [];
+        let cargar;
+        let indice = 0;
+        do{
+            if(cargar != 0){
+                cargar = parseInt(prompt("Ingresar Sueldos de empleados"));
+                sueldoEmpleados[indice] = cargar;
+                indice++;
+            }
+        }while(cargar != 0)
+        sueldoEmpleados.pop();
+        sueldoEmpleados.sort(function(v1, v2){
+            if(v1 > v2){
+                return 1;
+            }else{
+                return -1;
+            }
+        });
+        sueldoEmpleados.reverse()
+        for (let i = 0; i < sueldoEmpleados.length; i++) {
+            document.write(`Este es el sueldo del empleado ${i} = ${sueldoEmpleados[i]}${"<br>"}`)            
+        }
+*/
+
+//========================================================================= Arrays slice() ==============================================================================================================================================================================================================================================================
+/*
+    Si queremos extraer desde una determinada posición hasta el final del vector debemos llamar al método slice con un solo parámetro:
+
+       let vec=[10,20,30,40,50,60];
+       let vec2=vec.slice(2); // vec2 almacena [30,40,50,60]
+
+    Si queremos indicar una posición pero comenzando desde el final del vector debemos indicar un valor negativo en el primer parámetro:
+
+      let vec=[10,20,30,40,50,60];
+      let vec2=vec.slice(-2); // vec2 almacena [50,60]
+
+    También podemos indicar el segundo parámetro:
+
+      let vec=[10,20,30,40,50,60];
+      let vec2=vec.slice(-3,-1); // vec2 almacena [40,50]  
+
+    Por último podemos indicar el primer parámetro un valor positivo y el segundo un valor negativo indicando una posición desde el final
+
+      let vec=[10,20,30,40,50,60];
+      let vec2=vec.slice(1,-1); // vec2 almacena [20,30,40,50]
+
+*/
+/*Crear un vector de 10 elementos con valores aleatorios comprendidos entre 0 y 1000. 
+Buscar el menor y luego generar otro vector a partir de dicha posición hasta el final.
+let array = [];
+let indice = 0;
+do{
+    let numRandom = parseInt(1 + Math.random() * 1000);
+    array.push(numRandom);
+    document.write(array[indice] + "<br>");
+    indice++
+}while(array.length < 10);
+    let valorMin = Math.min(...array);
+    let posicion = array.indexOf(valorMin);
+    let arrayNuevo = array.slice(posicion);
+    document.write("Aqui esta el array que parte desde el valor minimo del array original = " + arrayNuevo.join("-"));
+
+
+*/
+//========================================================================= Arrays toString() / Join() ==============================================================================================================================================================================================================================================================
+/*Crear un vector de 10 elementos. 
+Inicializar los valores del vector cuando se crea. 
+Inicializar dos variables que resulten de llamar primero al método toString() 
+y la segunda variable inicializarla llamando al método join() sin parámetros. Mostrar un mensaje si el resultado de 
+la ejecución de los dos métodos retorna el mismo valor (empleando un if para comparar los string) 
+
+
+let array = [];
+for(let i = 0; i < 10; i++){
+    let numeroAleat = parseInt(1+ Math.random() * 1000);
+    array.push(numeroAleat);
+    document.write(array[i] + "<br>")
+}
+let aPalabra = array.toString();
+let insertar = array.join();
+if(aPalabra == insertar){
+    alert("Son iguales")
+}else{
+    alert("Son distintos")
+}
+
+document.write(array+ "<br>")
+document.write(aPalabra+ "<br>")
+document.write(insertar+ "<br>")
+*/
+//========================================================================= Formas de recorrer un arreglo ==============================================================================================================================================================================================================================================================
+//indice me devuelve la posicion de los elementos
+/*let vec = [10, 20, 30, 40, 50];
+for (let indice in vec) {
+    document.write('indice:' + indice);
+    document.write(' valor=' + vec[indice] + '<br>');
+}
+*/
+/*
+//For in no denso, el forIn no accede a componentes inexistentes.
+
+let vec = [10, , 30, , 50];
+document.write('Recorredo del vector con un for clásico<br>');
+for (let f = 0; f < vec.length; f++) {
+    document.write(vec[f] + '-');
+}
+document.write('<br>');
+document.write('Recorredo del vector con un for in<br>');
+for (let indice in vec) {
+    document.write(vec[indice] + '-');
+}
+*/
+/*
+//ForEach
+let vec = [10, 20, 30, 40, 50];
+vec.forEach(function(componente, indice) {
+    document.write('Posición:' + indice + ' = ');
+    document.write(componente + '<br>');
+})*/
+
+//========================================================================= Functions objeto arguments ==============================================================================================================================================================================================================================================================
