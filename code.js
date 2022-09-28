@@ -2252,3 +2252,232 @@ vec.forEach(function(componente, indice) {
 })*/
 
 //========================================================================= Functions objeto arguments ==============================================================================================================================================================================================================================================================
+/*Confeccionar una función que obtenga y retorne el mayor valor de una lista de enteros que le pasamos como parámetros. 
+function recorrer(array){
+    for (let i = 0; i < array.length; i++) {
+        document.write(array[i]);
+               
+    }
+    document.write("<br>");
+}
+function lista (){
+recorrer(arguments);
+let valorMayor = Math.max(...arguments);
+return valorMayor
+
+
+
+}
+
+document.write(lista(9,2,3,10,5,6,7));
+document.write("<br>");
+document.write(lista(9,2,3,12,5,6,7));
+
+*/
+//========================================================================= Functions anidadas ==============================================================================================================================================================================================================================================================
+/*Confeccionar una función que reciba un parámetro y defina una variable local. 
+Definir dentro de la función que acabamos de crear una función anidada que contenga un parámetro.
+En la función anidada imprimir el parámetro de la función que la contiene, el parámetro 
+que tiene la función anidada y el valor de la variable local de la función principal. 
+
+
+function recibe(variable){
+    function anidada(parametro){
+        document.write(recibe + "," + parametro + "," +variable);
+    }
+    let recibe = 1;
+    anidada(2)
+
+}
+
+recibe(3)
+
+function f1(x) {
+    function f2(y) {
+        document.write('Parámetro de la función exterior:' + x + '<br>');
+        document.write('Parámetro de la función anidada:' + y + '<br>');
+        document.write('variable local de la función exterior:' + z + '<br>');
+    }
+
+    let z = 1;
+    f2(2);
+}
+
+f1(3);
+*/
+
+
+//========================================================================= Functions con parametro ==============================================================================================================================================================================================================================================================
+/*let f1 = function(x, y) {
+    let s = x + y;
+    return s;
+}
+
+document.write(f1(4, 6) + '<br>');
+let f2 = f1;
+document.write(f2(3, 3) + '<br>');
+
+*/
+/*
+function calcular(x, y, fu) {
+    let resu = fu(x, y);
+    return resu;
+}
+
+let s1 = calcular(10, 5, function(v1, v2) {
+    return v1 + v2;
+});
+
+document.write(s1 + '<br>');
+
+let s2 = calcular(10, 5, function(v1, v2) {
+    return v1 - v2;
+});
+
+document.write(s2 + '<br>');*/
+
+
+//========================================================================= Eventos: load y DOMContentLoaded ==============================================================================================================================================================================================================================================================
+/*
+
+Buenas practicas incrustando funciones en el DOM
+//HTML
+    <form method="post" action="procesar.php" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+//js
+        window.onload = inicio;
+
+        function inicio() {
+            document.getElementById("formulario1").onsubmit = validar;
+        }
+
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }*/
+
+
+/*
+//HTML
+        <form method="post" action="procesar.php" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+//JS
+    window.onload = function() {
+            document.getElementById("formulario1").onsubmit = function() {
+                let usu = document.getElementById("usuario").value;
+                let cla = document.getElementById("clave").value;
+                if (usu.length == 0 || cla.length == 0) {
+                    alert('El nombre de usuario o clave está vacío');
+                    return false;
+                } else
+                    return true;
+            }
+        }
+
+
+*/
+
+//HTML
+
+/*<form method="post" action="procesar.php" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+//JS
+        window.addEventListener('load', inicio);
+
+        function inicio() {
+            document.getElementById("formulario1").addEventListener('submit', validar);
+        }
+
+        function validar(evt) {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                evt.preventDefault();
+            }
+        }
+
+        */
+
+//=========================================================================  function isNaN(parametro) ==============================================================================================================================================================================================================================================================
+/*Realizar la carga de dos valores enteros por teclado utilizando la función prompt. 
+Calcular la suma previo controlar que los dos valores sean de tipo numérico.
+let num1 = parseInt(prompt("Ingrese un numero entero"));
+let num2 = parseInt(prompt("Ingrese segundo numero entero"));
+if(isNaN(num1) || isNaN(num2)){
+    alert("Uno de los dos numeros no es un numero")
+}else{
+    let suma = num1 + num2;
+    document.write(`La suma es de = ${suma}`)
+}
+*/
+//=========================================================================  function isFinite(parametro) ==============================================================================================================================================================================================================================================================
+
+
+/*Se ingresan por teclado dos números (emplear parseFloat para convertirlos) mostrar un mensaje si alguno 
+de los dos no es un número (isNaN). Luego si son valores numéricos proceder a multiplicarlos y verificar 
+si el resultado es finito (isFinite) para mostrar el resultado. 
+
+let num1 = parseFloat(prompt("Ingrese un numero entero"));
+let num2 = parseFloat(prompt("Ingrese segundo numero entero"));
+let multiplicacion;
+
+if(isNaN(num1) || isNaN(num2)){
+    alert("No es un numero");
+}else{
+    multiplicacion = num1 * num2;
+}
+if(isFinite(multiplicacion)){
+    document.write(multiplicacion);
+}else{
+    document.write("Es infinito")
+}
+*/
+
+//=========================================================================  Funciones setInterval, clearInterval, setTimeout y clearTimeout ==============================================================================================================================================================================================================================================================
+/*La función setTimeout y setInterval permiten pasar como primer parámetro el 
+nombre de una función que se ejecutará después de una determinada cantidad de milisegundos que 
+le pasamos en el segundo parámetro. La única diferencia entre estas funciones es que si llamamos a setInterval 
+la función se ejecutará en forma repetida cada vez que pase 
+dicha cantidad de milisegundos, en cambio con setTimeout solo llamará la función una única vez.*/
+
+
+
+
+
+//=========================================================================  Condicional ?  ==============================================================================================================================================================================================================================================================
+/*Ingresar el sueldo bruto de un trabajador. 
+Si supera a 10000 aplicar un descuento del 10%, en caso contrario el descuento es del 5%.
+let sueldo = 2000;
+let descuento = sueldo > 1000 ? sueldo * 0.1 : sueldo * 0.05;
+
+console.log(descuento)*/
+
+//=========================================================================  Condicional ?  ==============================================================================================================================================================================================================================================================
+
+
