@@ -416,3 +416,11 @@ console.log(false && "valor de la derecha");
 console.log(true && "valor de la derecha");
 
 console.clear();
+
+
+//Expresiones regulares ============================================================================
+//Son una secuencia de caracteres que forma un patron de busqueda, principalmente utilziada para la busqueda de patrones de cadenas de caracteres.
+let cadena = "lorem hola ksfhn sfolashf asfiohsoaf asfkjhasfk ,asdsa safklsaf. asfdsaf"
+let expReg = new RegExp("lorem", "g"); //El segundo parametro son las banderas
+
+let expReg2 = /lorem/ 
