@@ -364,7 +364,7 @@ console.log(perro1.getRaza);
 
 
 
-
+/*
 
 //Objeto Math    ================================================
 //Nos ayuda a algunas operaciones matematicas especiales, es un objeto estatico.
@@ -379,7 +379,9 @@ console.clear()
 
 
 
+*/
 
+/*
 //Operador de cortocircuito    ================================================
 //Se utilizan los operadores AND (&&) u OR (||)
 
@@ -416,11 +418,102 @@ console.log(false && "valor de la derecha");
 console.log(true && "valor de la derecha");
 
 console.clear();
-
+*/
 
 //Expresiones regulares ============================================================================
 //Son una secuencia de caracteres que forma un patron de busqueda, principalmente utilziada para la busqueda de patrones de cadenas de caracteres.
+/*
 let cadena = "lorem hola ksfhn sfolashf asfiohsoaf asfkjhasfk ,asdsa safklsaf. asfdsaf"
 let expReg = new RegExp("lorem", "g"); //El segundo parametro son las banderas
 
 let expReg2 = /lorem/ 
+
+*/
+
+/*
+
+//Funciones Anonimas Autoejecutables ================================================================================
+//Patron para js puro.
+//Se llaman annonimas autoejecutables, porque la definimos y se ejecutan automaticamente, esta protejido de efectos secundarios.
+//Como funciona el cuerpo de una funcion anonima autoejecutable? => Funcion con nombre es Funcion Nombrada.
+(function(){
+  //Empiezo a escribir el codigo que se ejecuta automaticamente
+  console.log("Mi primer IFE");
+})(); //Hay que pone ; obligatoriamente
+(function(d,w,c){
+  console.log("mi segunda IFE");
+  c.log(d);
+  c.log(w);
+  c.log(c);
+  c.log("hola")
+})(document, window, console);
+//Diferentes formas de escribirlas
+(function(){
+  console.log("Forma Clasica");
+})();
+
+((function(){
+  console.log("primera Crockford");
+})());
+
++function(){
+  console.log("version unaria");
+}();
+
+!function(){
+  console.log("version facebook");
+}();
+
+
+*/
+
+
+
+
+//Import y Export ================================================================================0
+//Modulos en Javascript
+//Ordenamiento de codigo
+/*
+1- Importacion de archivos o modulos
+2- Declaracion de variables
+3- Declaracion de funciones
+4- Ejecucion de codigo
+*/
+
+//el export default solo exporta una sola cosa en el mofulo, se puede usar solo una vez, solo deja mandar funciones declaradas, osea funciones que se crean y no estan siendo mandadas a una variable
+
+//Asi se exporta una variable o funciones que estan guadadass dentro de variables
+/*
+ export let saludo = "hola";
+ export default saludo;
+*/
+//No se puede hacer esto
+
+// export default const saluda = ()=> console.log("hola como estas");
+
+//se hace de esta manera
+// export default saluda;
+
+//Se puede hacer de esta manera en una funcion declarada.
+//export default function saludo (){console.log("hola como estas");}
+
+//o
+/*
+function saludo (){console.log("hola como estas");}
+
+export default saludo
+*/
+
+
+//Sino exportar sin default tambien es de la siguiente manera:
+/*
+export let nombre = "joaquin";
+export const deciMiNombre = ()=> console.log("Me llamo joaquin");
+
+export const exportandoUnObjeto = {
+  nombre,
+  deciMiNombre
+}
+//El export default se realiza una vez declarado y asignado los valores, debajo de lo que queremos exportar
+export default exportandoUnObjeto;
+*/
