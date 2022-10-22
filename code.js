@@ -106,7 +106,6 @@ if(numero < 0){
 */
 //=======================================================================================================================================================================================================================================================================================================================================
 
-
 /*
 De un postulante a un empleo, que realizó un test de capacitación, se obtuvo la siguiente información: nombre del postulante, cantidad total de preguntas que 
 se le realizaron y cantidad de preguntas que contestó correctamente. Se pide confeccionar un programa que lea los datos del postulante e informe el nivel del mismo 
@@ -163,7 +162,7 @@ switch (cosas) {
 }
 */
 //========================================================================   while     ===============================================================================================================================================================================================================================================================
-    /*
+/*
     Realizar un programa que imprima 25 términos de la serie 11 - 22 - 33 - 44, etc. (No se ingresan valores por teclado).
 
 let x = 11
@@ -232,8 +231,6 @@ document.write(`Esta es la cantidad de alumnos con la nota menor a 7 = ${cantMen
 
 */
 
-
-
 //================================================================   while   =======================================================================================================================================================================================================================================================================
 /*
     En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que 
@@ -269,7 +266,6 @@ document.write(`Esta es la cantidad de alumnos con la nota menor a 7 = ${cantMen
 
 */
 
-
 //=================================================================   while   ======================================================================================================================================================================================================================================================================
 /*
     Realizar un programa que imprima 20 términos de la serie 5 - 10 - 15 - 20, etc. (No se ingresan valores por teclado)
@@ -283,12 +279,8 @@ document.write(`Esta es la cantidad de alumnos con la nota menor a 7 = ${cantMen
 }
 */
 
-
-
-
-
 //===================================================================   while   ====================================================================================================================================================================================================================================================================
-   /*
+/*
 Mostrar los múltiplos de 10 hasta el valor 1500.
     Debe aparecer en pantalla 10 - 20 -30 etc.
 
@@ -302,7 +294,6 @@ Mostrar los múltiplos de 10 hasta el valor 1500.
     }
 
 */
-
 
 //===================================================================   while   ====================================================================================================================================================================================================================================================================
 /*   
@@ -426,7 +417,6 @@ if (suma > 0) {
 */
 //========================================================================     Do while      ===============================================================================================================================================================================================================================================================
 
-
 /*
 En un banco se procesan datos de las cuentas corrientes de sus clientes. De cada cuenta corriente se conoce: número de 
 cuenta, nombre del cliente y saldo actual. El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
@@ -467,8 +457,6 @@ document.write(`La suma total de los acreedores es de ${suma}`)
 
 
 */
-
-
 
 //========================================================================     Do while      ===============================================================================================================================================================================================================================================================
 
@@ -528,7 +516,6 @@ document.write("<br>")
 document.write(`El total de Hombres sensados de edad entre 16  y 65 años es de: ${sumH16y65}`);
 document.write("<br>")
 */
-
 
 //==============================================================        For    =========================================================================================================================================================================================================================================================================
 
@@ -599,7 +586,6 @@ document.write("<br>");
 
 document.write(`Tabla del ${num}`);
 */
-
 
 //=========================================================================          For          ==============================================================================================================================================================================================================================================================
 /*
@@ -716,9 +702,6 @@ ${"<br>"} La cantidad de valores Pares es de  ${pares}`);
 
 
 */
-
-
-
 
 //=========================================================================          For          ==============================================================================================================================================================================================================================================================
 /*Se cuenta con la siguiente información:
@@ -894,12 +877,6 @@ document.write("Estamos en el primer cuatrimestre del año.");
 
 */
 
-
-
-
-
-
-
 //=========================================================================          Clases        ==============================================================================================================================================================================================================================================================
 
 /*Confeccionar una función que nos retorne un string con el siguiente formato:
@@ -1005,8 +982,6 @@ Sumar componente a componente.
 El tamaño del vector es a elección. 
 */
 
-
-
 /*
 function carga (vec1, vec2){
     for(let i = 0; i < vec1.length; i++){
@@ -1085,7 +1060,6 @@ potencia3De(num);
 
 */
 
-
 /*
 Ingresar por teclado un valor y luego mostrar la raiz cuadrada de dicho valor.
 
@@ -1148,7 +1122,6 @@ document.write("Se obtuvo un numero de " + cont + " Palabras.");
 (fuente) y luego la clave a buscar. En caso de encontrarla, imprimir la posición, de lo contrario una leyenda que indique que no está.
 */
 
-
 /*
 let fuente = prompt("Ingresar una frase de mas de dos palabras.");
 let clave = prompt("Ingrse la palabra que quiera buscar dentro de ese texto.");
@@ -1164,13 +1137,9 @@ if(frase != -1){
 determinar si es o no una palabra palíndromo. (Palabra que se lee de igual manera de 
     adelante hacia atrás, que de atrás hacia delante) */
 
-
-
-
-
 //=========================================================================          Clases Strings   email    ==============================================================================================================================================================================================================================================================
 
-    /*Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene cargado el carácter @. 
+/*Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene cargado el carácter @. 
 
     function arroba (email){
             let buscar = email.indexOf("@")
@@ -1261,7 +1230,6 @@ está
 fría
 */
 
-
 /*
 function dividirFrase(arg){
     let arr = arg.split(" ");
@@ -1336,7 +1304,6 @@ function concat(){
 
 //=========================================================================    FORM, BUTTON y TEXT.   ==============================================================================================================================================================================================================================================================
 
-
 // function puzzle (n){
 //     //planteo las variables a,b,c y d = 1
 //     let a = 1;
@@ -1356,11 +1323,11 @@ function concat(){
 
 // puzzle(100)
 
-//4315102208   
+//4315102208
 // let n = 4315102208
 // let porDiez = n * 10;
 // document.write(n * 10);
-// //43151022080 
+// //43151022080
 // let elevado100 = Math.pow(porDiez, 100)
 
 //=========================================================================    Password   ==============================================================================================================================================================================================================================================================
@@ -1401,7 +1368,6 @@ function selected(){
 </form>
 */
 //=========================================================================   DOM select   ==============================================================================================================================================================================================================================================================
-
 
 /*
 Generar un presupuesto de un equipo de computación a partir de tres 
@@ -1661,7 +1627,6 @@ function verificar(control){
 
 //=========================================================================   DOM onFocus y onBlur   ==============================================================================================================================================================================================================================================================
 
-
 /*Implementar un formulario que solicite la carga del nombre y la edad de una persona. Cuando el control tome foco borrar el contenido actual. Mostrar en las propiedades value de los controles text los mensajes "nombre" y "mail" respectivamente.
 <form>
 <input type="text" id="nombre" onFocus="vaciar(this)" value="nombre"><br>
@@ -1690,10 +1655,9 @@ function verificar(control){
  }
  */
 
- //=========================================================================   OBJETO WINDOW   ==============================================================================================================================================================================================================================================================
+//=========================================================================   OBJETO WINDOW   ==============================================================================================================================================================================================================================================================
 
-
- /*
+/*
     <p>Este programa permite analizar la llamada a distintas responsabilidades del objeto window.</p>
     <form>
         <br>
@@ -1738,7 +1702,7 @@ function verificar(control){
         }
     </script>
     */
-    //=========================================================================   OBJETO WINDOW OPEN() ==============================================================================================================================================================================================================================================================
+//=========================================================================   OBJETO WINDOW OPEN() ==============================================================================================================================================================================================================================================================
 /*Confeccionar una página que permita abrir otra ventana cuando se presiona un botón. Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles. 
     function abrir(){
     let ventana = open('','','width=600,height=300');
@@ -1746,7 +1710,7 @@ function verificar(control){
 }
 <input type="button" onclick="abrir()"></input>
 */
-    //=========================================================================   OBJETO WINDOW  LOCATION  ==============================================================================================================================================================================================================================================================
+//=========================================================================   OBJETO WINDOW  LOCATION  ==============================================================================================================================================================================================================================================================
 /*Confeccionar una página que tenga un botón. Cuando se presione dicho botón 
 generar un valor aleatorio entre 0 y 2. Si se genera el 0 llamar al webmail de 
 Outlook, si se genera un 1 llamar a gmail en caso de generarse un 2 llamar a yahoo.
@@ -1819,8 +1783,6 @@ function fecha(){
     document.write(`hoy es ${fecha.getDay()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`)
 }   
 */
-
-
 
 //========================================================================= CLASES ==============================================================================================================================================================================================================================================================
 /*Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) 
@@ -2127,7 +2089,7 @@ let nombres = ['marcos', 'ana', 'luis', 'jorge', 'carlos'];
         }
         */
 
-        /*Cargar los sueldos de un conjunto de empleados. 
+/*Cargar los sueldos de un conjunto de empleados. 
         Finalizar la carga al ingresar cero. 
         Mostrar por pantalla los sueldos ordenados de mayor a menor. 
 
@@ -2306,7 +2268,6 @@ function f1(x) {
 f1(3);
 */
 
-
 //========================================================================= Functions con parametro ==============================================================================================================================================================================================================================================================
 /*let f1 = function(x, y) {
     let s = x + y;
@@ -2335,7 +2296,6 @@ let s2 = calcular(10, 5, function(v1, v2) {
 });
 
 document.write(s2 + '<br>');*/
-
 
 //========================================================================= Eventos: load y DOMContentLoaded ==============================================================================================================================================================================================================================================================
 /*
@@ -2366,7 +2326,6 @@ Buenas practicas incrustando funciones en el DOM
             } else
                 return true;
         }*/
-
 
 /*
 //HTML
@@ -2438,7 +2397,6 @@ if(isNaN(num1) || isNaN(num2)){
 */
 //=========================================================================  function isFinite(parametro) ==============================================================================================================================================================================================================================================================
 
-
 /*Se ingresan por teclado dos números (emplear parseFloat para convertirlos) mostrar un mensaje si alguno 
 de los dos no es un número (isNaN). Luego si son valores numéricos proceder a multiplicarlos y verificar 
 si el resultado es finito (isFinite) para mostrar el resultado. 
@@ -2466,10 +2424,6 @@ le pasamos en el segundo parámetro. La única diferencia entre estas funciones 
 la función se ejecutará en forma repetida cada vez que pase 
 dicha cantidad de milisegundos, en cambio con setTimeout solo llamará la función una única vez.*/
 
-
-
-
-
 //=========================================================================  Condicional ?  ==============================================================================================================================================================================================================================================================
 /*Ingresar el sueldo bruto de un trabajador. 
 Si supera a 10000 aplicar un descuento del 10%, en caso contrario el descuento es del 5%.
@@ -2478,6 +2432,672 @@ let descuento = sueldo > 1000 ? sueldo * 0.1 : sueldo * 0.05;
 
 console.log(descuento)*/
 
-//=========================================================================  Condicional ?  ==============================================================================================================================================================================================================================================================
+//========================================================================= Expresiones regulares  ==============================================================================================================================================================================================================================================================
+//Verificar si algun texto contiene el string o los numero indicados en /^[desde - hasta]{digitos}$/ o /algo/
+
+/*
+let valor = prompt('Ingrese un numero entero positivo de 3 dígitos');
+let patron = /^[0-9]{3}$/;
+if (patron.test(valor))
+    alert('Se ingresó un valor entero positivo de 3 dígitos');
+else
+    alert('No se ingresó un valor entero positivo de 3 dígitos');
+    */
+/*
+    let valor = prompt('Ingrese un numero entero positivo de 3 dígitos');
+    let patron = new RegExp('^[0-9]{3}$');
+    if (patron.test(valor))
+        alert('Se ingresó un valor entero positivo de 3 dígitos');
+    else
+        alert('No se ingresó un valor entero positivo de 3 dígitos');
+
+*/
+/*
+        let oracion = prompt('Ingrese una oración');
+        let patron = /hora/;
+        if (patron.test(oracion))
+            alert('La oración ingresada contiene la palabra \'hora\'');
+        else
+            alert('La oración ingresada no contiene la palabra \'hora\'');*/
+//========================================================================= Expresiones regulares  ==============================================================================================================================================================================================================================================================
+/*
+let oracion = prompt('Ingrese una oración');
+let patron1 = /^-/;
+if (patron1.test(oracion))
+    alert('Comienza la oración con el carácter -');
+else
+    alert('No comienza la oración con el carácter -');
+let patron2 = /^hora/;
+if (patron2.test(oracion))
+    alert('Comienza la oración con la palabra hora');
+else
+    alert('No comienza la oración con la palabra hora');
 
 
+    let palabra = prompt('Ingrese una palabra');
+    let patron = /^[a-zA-Z]/;
+    if (patron.test(palabra))
+        alert('La palabra comienza con un carácter alfabético (mayúscula o minúscula)');
+    else
+        alert('La palabra no comienza con un carácter alfabético (mayúscula o minúscula)');}
+        */
+/*
+        ?    busca cero o una ocurrencia en el string
+        remplaza a    {0,1}
+   *    busca cero o más ocurrencias en el string
+        remplaza a    {0,}
+   +    busca una o más ocurrencias en el string
+        remplaza a    {1,}
+
+        */
+//Ingresar una palabra por teclado y validar que tenga al menos una vocal.
+/*
+                let palabra = prompt('Ingrese una palabra con al menos una vocal:');
+        let patron = /[aeiou]+/;
+        if (patron.test(palabra))
+            document.write('La palabra ingresada tiene al menos una vocal');
+        else
+            document.write('La palabra ingresada no tiene vocales');
+*/
+
+/*
+Código	Equivalente
+\d      [0-9]
+\D      [^0-9]
+\w      [a-zA-Z0-9_]
+\W      [^a-zA-Z0-9_]
+\s	espacio en blanco
+
+*/
+//========================================================================= Funciones con parametros por defecto ==============================================================================================================================================================================================================================================================
+/*Confeccionar una función que reciba un vector y el tipo de lista HTML que se debe generar. 
+Por defecto generar una lista no ordenada. Retornar una cadena con la lista HTML generada.
+
+
+function tabla (valor = 2, longitud = 10){
+    for(let i = 0; i <= longitud; i++){
+        resultado = valor * i;
+        document.write(`${valor} * ${i} = ${resultado} ${"<br>"}`)
+    }
+
+}
+tabla(3)
+tabla(4, 11);
+*/
+
+//========================================================================= Funciones parametros Rest ==============================================================================================================================================================================================================================================================
+/* Ejemplo
+function sumar(...valores) {
+    let suma = 0;
+    for (let x = 0; x < valores.length; x++)
+        suma += valores[x];
+    return suma;
+}
+*/
+/*Implementar una función que mediante un parámetro Rest reciba una lista de enteros 
+y retorne un Array con los elementos ordenados de menor a mayor.
+
+function ordenar(...valores){
+    let menAMay = valores.sort(function(v1,v2){
+        if(v1 > v2){
+            return 1
+        } else{
+            return -1
+        }
+    });
+    menAMay.reverse();
+    return menAMay;
+}
+document.write(ordenar(2,3,4,1,220,-210,-20,300,400,50,5.5))
+*/
+
+//========================================================================= Funciones parametros Spread ==============================================================================================================================================================================================================================================================
+/*Pasar array como parametro cuando se llama una funcion
+
+function mostrar (x, y, z){
+    document.write(x, y, z)
+}
+let contenedor = [1,2,3];
+mostrar(...contenedor);
+
+
+
+
+    El método max de la clase Math recibe una lista de valores numéricos y nos retorna el mayor. Definir un vector con una lista de valores y llamar al método max utilizando el operador Spread
+
+function mostrar (x, y, z){
+    let max = Math.max(x,y,z)
+    document.write(max)
+}
+let contenedor = [1,2,3];
+mostrar(...contenedor);
+*/
+//========================================================================= Funciones flecha ==============================================================================================================================================================================================================================================================
+//Ordenar un vector de enteros mediante el método sort, pasar una arrow function.
+/*
+let vector = [23,34,54,-52,-30];
+ const verificar = (v1 ,v2) => {
+     let mayor = v1 > v2 ? 1 : -1
+     return mayor;
+ }
+ vector.sort(verificar)
+ document.write(vector)
+*/
+
+/*Cuando las funciones flexhas solo tienen un parametro no se cierra con parentesis.
+vector.forEach(element => {
+    document.write(element + " ");
+});
+
+
+
+
+Definir una función de flecha que reciba un valor entero y retorne otro valor entero aleatorio 
+comprendido entre 1 y el valor que llega como parámetro. 
+Asignar dicha función de flecha a una constante para permitir llamarla en sucesivas ocaciones.
+
+
+
+const retornarValor = valorEntero=>{
+    if(valorEntero > 1){
+        let valorAleatorio = 1 + Math.random() * valorEntero;
+        return Math.floor(valorAleatorio);
+    }else if(valorEntero < 1){
+        valorAleatorio = -1 + Math.random() * valorEntero
+        return Math.floor(valorAleatorio);
+    }
+}
+
+let valorEntero = parseInt(prompt("Ingresar cualquier numero"));
+document.write(retornarValor(valorEntero));
+
+*/
+
+//========================================================================= Definicion de metodos en objetos literales ==============================================================================================================================================================================================================================================================
+/*
+Crear un objeto literal llamado cliente1 con dos propiedads 'nombre' y 'saldo'. 
+Definir tres métodos con notación abreviada que permitan depositar, extraer e imprimir su saldo/
+const cliente = {
+    nombre: "Joaquin",
+    saldo: 200000,
+    depositar(deposito){
+        this.saldo = this.saldo + deposito;
+    },
+    extraer(deposito){
+        this.saldo = this.saldo - deposito;
+
+    },
+    imprimir(){
+        document.write(`Saldo actual de ${this.nombre} = ${this.saldo}${"<br>"}`);
+    }
+}
+cliente.imprimir();
+cliente.depositar(3000);
+cliente.imprimir();
+cliente.extraer(1000);
+cliente.imprimir();
+*/
+/*
+Crear un objeto que represente los datos de un participante de un juego. Definir las propiedades
+
+ nombre
+ puntos
+
+y los métodos:
+
+imprimir (mostrar el nombre de jugador y los puntos actuales)
+aumentarpuntos (permite incrementar la cantidad de puntos actuales del jugador)
+verificarsigano (mostrar un mensaje si los puntos superan a 1000)
+
+
+const personaje = {
+    nombre: "",
+    puntos: 0,
+    imprimir(){
+        document.write(`nombre del personaje = ${this.nombre}${"<br>"}
+        Puntos actuales de tu personaje = ${this.puntos}${"<br>"}`)
+    },
+    aumentarPuntos(aumento){
+        this.puntos = this.puntos + aumento;
+    },
+    verificarSiGano(){
+        if(this.puntos > 100){
+            alert("haz ganado el juego")
+        }else{
+            alert("faltan puntos");
+            
+        }
+    }
+}
+personaje.imprimir()
+personaje.nombre = prompt("Ingresa tu nombre")
+personaje.imprimir();
+personaje.aumentarPuntos(200)
+personaje.imprimir();
+personaje.verificarSiGano()
+
+*/
+//========================================================================= Definicion de clases ==============================================================================================================================================================================================================================================================
+
+/*Plantear una clase Cliente que permita almacenar el nombre de un cliente y el saldo actual. 
+Definir además del constructor otros dos métodos que permitan depositar y extraer dinero.
+Definir luego dos objetos de dicha clase.*/
+/*
+class Cliente {
+    constructor(nombre, saldo){
+        this.nombre = nombre;
+        this.saldo = saldo;
+    }
+    imprimir(){
+        document.write(`Nombre del cliente: ${this.nombre}${"<br>"}
+        Deposito Actual del cliente: ${this.saldo}${"<br>"}${"<br>"}`);
+    }
+    depositar(dinero){
+        document.write(`Se deposita una cantidad de $${dinero}${"<br>"}${"<br>"}`);
+        this.saldo = this.saldo + dinero;
+    }
+    extraer(dinero){
+        document.write(`Se extrae una cantidad de $${dinero}${"<br>"}${"<br>"}`);
+        this.saldo = this.saldo - dinero;
+
+    }
+}
+const cliente1 = new Cliente();
+cliente1.nombre = "joaquin";
+cliente1.saldo = 20;
+cliente1.imprimir()
+cliente1.depositar(200);
+cliente1.imprimir();
+cliente1.extraer(10);
+cliente1.imprimir();
+
+*/
+/*Plantear una clase llamada Menu que administre una lista de enlaces. 
+Definir como atributos dos vectores paralelos que almacenen en uno la 'url' y en el otro la 'descripcion' de dicho enlace. 
+Permitir insertar enlaces y finalmente mediante un método que le pasamos el 'id' de un elemento HTML proceda a crearlo al menú.
+
+
+class Menu {
+    constructor() {
+        this.enlaces = [];
+        this.descripcion = [];
+    }
+
+    insertar(enlace, descripcion) {
+        this.enlaces.push(enlace);
+        this.descripcion.push(descripcion);
+    }
+
+    mostrar(elemento) {
+        let cadena = '<div>';
+        for (let x = 0; x < this.enlaces.length; x++)
+            cadena += `[<a href="${this.enlaces[x]}">${this.descripcion[x]}</a>]`;
+        cadena += '</div>';
+        document.getElementById(elemento).innerHTML = cadena;
+    }
+}
+
+const menu = new Menu();
+menu.insertar("http://www.google.com", "Google");
+menu.insertar("http://www.bing.com", "Bing");
+menu.insertar("http://www.yahoo.com", "Yahoo");
+menu.mostrar('menu');
+*/
+/*
+    Confeccionar una clase que permita administrar el nombre y la edad de una persona. 
+    Mostrar los datos cargados. 
+    Imprimir un mensaje si es mayor de edad (edad>=18)
+    
+    class Persona{
+        constructor(nombre, edad){
+            this.nombre = nombre;
+            this.edad =  edad;
+        }
+        mostrar(){
+            document.write(`Nombre del chico = ${this.nombre}${"<br>"}
+            Edad de ${this.nombre} = ${this.edad}`)
+        }
+        evaluar(){
+            return this.edad >= 18 ? alert("Es mayor de 18") : alert("Es menor de 18");
+        }
+    }
+const persona1 = new Persona("joaquin", 21)
+persona1.mostrar();
+persona1.evaluar();
+
+*/
+/*
+    Plantear una clase ListaOrdenada. En el constructor definir un atributo de tipo vector vacío.
+    Luego definir dos métodos, uno que permita agregar elementos a la lista y otro que lo muestre en la página.
+
+
+class ListaOrdenada {
+    constructor(){
+        this.lista = [];
+    }
+    agregarOl(elementos){
+        this.lista.push(elementos);
+    }
+    mostrar(){
+        let ol = "<ol>";
+        for(let i = 0; i < this.lista.length; i++){
+            ol += "<li>" + this.lista[i] + "</li>" + "<br>";
+            ol += "</ol>"
+            document.write(ol)
+        }
+    }
+}
+
+let lista1 = new ListaOrdenada();
+lista1.agregarOl("hola q onda");
+lista1.mostrar()*/
+
+//========================================================================= Herencia ==============================================================================================================================================================================================================================================================
+/*Declarar una clase llamada Calculadora que reciba en el constructor dos valores.
+Definir las responsabilidades de sumar, restar, multiplicar, dividir e imprimir.
+Declarar luego una clase llamada CalculadoraCientifica que herede de Calculadora y 
+añada las responsabilidades de calcular el cuadrado del primer número y la raíz cuadrada.
+
+class Calculadora{
+    constructor(valor1, valor2){
+        this.valor1 = valor1;
+        this.valor2 = valor2;
+        this.resultado = null;
+    }
+    sumar(){
+        this.resultado = this.valor1 + this.valor2;
+        return this.resultado;
+    }
+    restar(){
+        this.resultado = this.valor1 - this.valor2;
+        return this.resultado;
+    }
+    dividir(){
+        this.resultado = this.valor1 / this.valor2;
+        return this.resultado;
+    }
+    multiplicar(){
+        this.resultado = this.valor1 * this.valor2;
+        return this.resultado;
+    }
+    imprimir(){
+        document.write(`Resta = ${this.restar()}${"<br>"}Suma = ${this.sumar()}${"<br>"}Dividir = ${this.dividir()}${"<br>"}Multiplicacion = ${this.multiplicar()}${"<br>"}`)
+    }
+}
+
+const numcalNorm = new Calculadora(2, 3);
+numcalNorm.imprimir();
+
+class CalculadoraCientifica extends Calculadora{
+    cuadrado(){
+        this.resultado = Math.pow(this.valor1,2);
+        return document.write(this.resultado + "<br>");
+    }
+    raiz(){
+        this.resultado = Math.sqrt(this.valor1);
+        return document.write(this.resultado + "<br>");
+    }
+}
+
+const numCalCient = new CalculadoraCientifica(2, 20);
+numCalCient.cuadrado()
+numCalCient.imprimir()
+numCalCient.raiz();
+*/
+
+//========================================================================= getters y setters ==============================================================================================================================================================================================================================================================
+/*class Dado {
+    constructor() {
+        this._valor = 1;
+    }
+
+    get valor() {
+        return this._valor;
+    }
+
+    set valor(v) {
+        this._valor = v;
+    }
+
+    imprimir() {
+        document.write(this.valor + '<br>');
+    }
+}
+
+const dado1 = new Dado();
+dado1.imprimir();
+dado1.valor = 6;
+dado1.imprimir();
+dado1.valor = 20;
+dado1.imprimir();
+dado1.valor = 1
+dado1.imprimir()
+*/
+/*Declarar una clase llamada Persona.
+Definir los atributos donde almacenar su nombre y edad. Crear dos propiedades para que se puedan acceder a los atributos definidos.
+
+Validar que no se puedan ingresar valores negativos para la edad.
+
+
+class Persona {
+    constructor(nombre, edad){
+        this.nombre = null;
+        this.edad = null;
+    }
+    get getNombre(){
+        return this.nombre
+    }
+    set setNombre(valor){
+        this.nombre = valor;
+    }
+    get getEdad(){
+        return this.edad;
+    }
+    set setEdad(newEdad){
+        if(newEdad > 0 && typeof newEdad != String){
+            this.edad = newEdad;
+        }else{
+            return alert("Ingresar valores validos")
+        }
+    }
+}
+*/
+
+//========================================================================= Static metodo ==============================================================================================================================================================================================================================================================
+
+/*
+Declarar una clase llamada 'Fecha' con dos métodos estáticos:
+
+  static retornarMes(mes)
+
+Retorna el nombre de mes a partir de un valor de 1 a 12.
+
+  static fechaCompleta()
+
+Retorna el día, mes y año actual separado por guiones.
+
+class Fecha {
+     static retornarMes(mes){
+        switch (mes){
+            case 1: document.write("Enero");
+            break;
+            case 2: document.write("Febrero");
+            break;
+            case 3: document.write("Marzo");
+            break;
+            case 4: document.write("Abril");
+            break;
+            case 5: document.write("Mayo");
+            break;
+            case 6: document.write("Junio");
+            break;
+            case 7: document.write("Julio");
+            break;
+            case 8: document.write("Agosto");
+            break;
+            case 9: document.write("Septiembre");
+            break;
+            case 10: document.write("Octubre");
+            break;
+            case 11: document.write("Noviembre");
+            break;
+            case 12: document.write("Diciembre");
+            break;
+            default: document.write("No ingresaste un numero correcto");
+        }
+    }
+    static fechaCompleta(){
+        let fecha = new Date();
+        let dia = fecha.getDay();
+        let mes = fecha.getMonth();
+        let año = fecha.getFullYear();
+
+        let DiaDesemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+        let DiaDeHoy = DiaDesemana[dia - 1];
+        let mesesDelAño = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        let mesHoy = mesesDelAño[mes];
+        document.write("<br>" + DiaDeHoy + "," + dia + " " + mesHoy + " " + año);
+    }
+
+
+}
+Fecha.retornarMes(2);
+Fecha.fechaCompleta();
+*/
+
+//========================================================================= For of ==============================================================================================================================================================================================================================================================
+
+/*
+const articulos = [{
+      nombre:'sandía',
+      precio:12
+    },
+    {
+      nombre:'manzanas',
+      precio:52
+    },
+    {
+      nombre:'peras',
+      precio:40
+    },
+    {
+      nombre:'naranjas',
+      precio:35
+    }];
+
+    articulos.forEach(element => {
+        document.write(element.nombre + " " + element.precio + "<br>")
+    });
+
+    //For of para mostrar el valor de cada indice del array
+    for (const elemento of articulos) {
+        if(elemento.precio > 30){
+            document.write(elemento.precio + "<br>")
+        }
+    }
+    //For in para mostrar el indice de cada array
+
+    */
+
+//========================================================================= Modulos ==============================================================================================================================================================================================================================================================
+// const nombre =  "hola";
+// let mayus = nombre[0].toUpperCase();
+// let minus = nombre[0].toLowerCase();
+// if(nombre[0] === minus){
+//     let newNombre = nombre.slice(1)
+//     let nombreMayus = mayus + newNombre;
+//     console.log(nombreMayus)
+// }else if(nombre[0] === mayus){
+//     console.log(nombre)
+// }
+// Crea un nuevo array
+// Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
+// El nuevo array debe tener la misma longitud que el array del argumento
+//Tu código:
+//   let array = [1,2,3,4,5,6,7,25]
+
+// const newArray = array.map((value)=>cb(value)))
+
+//   const filtro = array.filter(value=>{
+//     if(value[0] !== "a"){
+//         console.log(value)
+//     }
+//   })
+// for (const value of array) {
+//     console.log(value)
+// }
+
+// const filtro = array.filter(value=>{
+//     if(value[0] === "a"){
+//         return value
+//     }
+//   })
+//   console.log(filtro)
+
+//=====================================
+//101 -> array[i] * (2 elevado [i])
+
+//Binario a decimal
+
+const pasarABinario = (num)=>{
+    let numArray = num.split("");
+    let numReverse = numArray.reverse()
+    let numeroEntero = []
+    let total = 0;
+    for (let i = 0; i < numReverse.length; i++) {
+        let elevado = Math.pow(2, i);
+        numeroEntero.push(numReverse[i] * elevado);
+        total += numeroEntero[i]
+    }
+    return total
+}
+console.log(pasarABinario("10001"));
+
+//decimal a binario
+
+/*
+14/2 --> 7 / 0
+7/2 --> 3 / 1
+3/2 --> 1 / 1
+1/2 --> 0 / 1
+
+*/
+
+/*
+function BinarioADecimal(num) {
+    let suma = 0
+    let posicion = 0
+    for (let i = num.length - 1; i >= 0; i--) {//Funcion invertida
+       suma = suma + num[i] * 2 ** posicion
+       posicion++
+    }
+    return suma
+   }
+   console.log(BinarioADecimal("111"))
+   */
+
+
+
+//de decimal a binario
+/*
+const decimalABinario = (num) => {
+  let div = num;
+  let restoUni;
+  let resto = [];
+  do{
+    div = div / 2;
+    restoUni = Math.round(div % 1);
+     resto.push(restoUni);
+  }while (div > 1) 
+  let reverseResto = resto.reverse();
+   let restoFinal = reverseResto.join("");
+   return restoFinal
+};
+console.log(decimalABinario(25));
+ */
+
+
+function hola (){
+    var foo = "Hola!";
+}
+var bar = "chao!";
