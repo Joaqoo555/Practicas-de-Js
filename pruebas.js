@@ -104,24 +104,24 @@ const objeto = {
     id: 0,
 }
 */
-let pedirComida = [
-  { nombre: "Harry", dieta: "standard" },
-  { nombre: "Luna", dieta: "vegan" },
-  { nombre: "Goyle", dieta: "standard" },
-];
-let dietasTipo;
-let contStandard = 0;
-let contVegan = 0;
-pedirComida.forEach(element => {
-    dietasTipo = element.dieta;
-    if(dietasTipo === "standard"){
-        contStandard++
-    }else if(dietasTipo === "vegan"){
-        contVegan++
-    }
-});
-let personas ={
-    standard: contStandard,
-    vegan: contVegan
-}
-console.log(personas);
+// let pedirComida = [
+//   { nombre: "Harry", dieta: "standard" },
+//   { nombre: "Luna", dieta: "vegan" },
+//   { nombre: "Goyle", dieta: "standard" },
+// ];
+// let dietasTipo;
+// let contStandard = 0;
+// let contVegan = 0;
+// pedirComida.forEach(element => {
+//     dietasTipo = element.dieta;
+//     if(dietasTipo === "standard"){
+//         contStandard++
+//     }else if(dietasTipo === "vegan"){
+//         contVegan++
+//     }
+// });
+// let personas ={
+//     standard: contStandard,
+//     vegan: contVegan
+// }
+// console.log(personas);

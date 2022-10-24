@@ -3095,9 +3095,3 @@ const decimalABinario = (num) => {
 };
 console.log(decimalABinario(25));
  */
-
-
-function hola (){
-    var foo = "Hola!";
-}
-var bar = "chao!";
