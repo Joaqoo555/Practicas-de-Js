@@ -5,3 +5,6 @@ Javascript trabaja con un solo hilo de ejecucion, las peticiones que va haciendo
 
 
 */
+const saludar = ()=>{
+
+}
