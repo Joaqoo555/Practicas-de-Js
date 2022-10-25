@@ -1,3 +1,4 @@
+/*
 // Clousures, es un patron muy utilizado, estan entro de las good parts.
 //Podemos guardar funciones en variables y luego llamarlas
 
@@ -32,6 +33,65 @@ const myContador = function(){
     function incrementar(){
         return _contador++;
     }
-    decr
+    return incrementar;
 }
 
+//Quiero que una funcion que sume de a 5 o de a 10, siempre use una funcion.
+//de a cuantos quiero sumar ==> base
+//yo puedo retornar una funcion desde sumaador, 
+
+function sumador(base){
+    let result = 0;
+    function logica(){
+        result += base;
+        return result;
+    }
+    function reseet (){
+        result = 0;
+        return result;
+    }
+    return {
+        logica,
+        reseet
+    }
+}
+//Son funciones que reutilizan codigo y puedo crear diferentes instancias a partir de la funcion padre.
+//Cada vez que ejeuto Sumador, se crea un nuevo contexto, o una memoria, a la funcion que se retorna, osea a la instancia
+//la instancia sumador5 === logica() => por ende cada vez que yo ejecuto sumador5() estoy ejecutando logica()
+
+//Los clousures simulan las clases con sus metodos privados.
+//
+const sumador5 = sumador(5);
+console.log(sumador5.logica());
+console.log(sumador5.reseet());
+console.log(sumador5.logica());
+console.log(sumador5.logica());
+console.log(sumador5.logica());
+console.log(sumador5.logica());
+console.log(sumador5.reseet());
+console.log(sumador5.logica());
+*/
+
+
+
+
+
+const creaFuncion = function(){
+    let arreglo = [];
+    for (let i = 0; i < 3; i++) {
+        arreglo.push(
+            //las 3 funciones hacen uso de "i"
+            //i en la ultima vuelte quedo en un valor de 3
+            function(){
+             console.log(i);
+        })
+        
+    }
+    //retornamos un arreglo con funciones
+    return arreglo;
+}
+//La funcion retorna un arreglo de funciones, por lo que podemos acceder a cada indice con la siguiente sintaxis.
+let arr = creaFuncion();
+arr[0]() //0
+arr[1]() //1
+arr[2]() //2
