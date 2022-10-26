@@ -21,6 +21,8 @@ let array = Object.entries(objeto);
 console.log(array)
 */
 
+const { Queue } = require("../FT-M1/04-EstructuraDeDatos-I/homework/homework");
+
 //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece
 //en formato par clave-valor.
 //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
@@ -125,3 +127,51 @@ const objeto = {
 //     vegan: contVegan
 // }
 // console.log(personas);
+
+// const contadorRegresivo = (a) =>{
+//   if(a < 20) return
+//   console.log(a);
+//     return contadorRegresivo(a + 1)
+// }
+// contadorRegresivo(10)
+
+/*
+function nFactorial(n) {
+ if(n === 0){
+  return 1
+ }else{
+  total = n * nFactorial(n - 1)
+  return total
+ }
+}
+console.log(nFactorial(5));
+*/
+//0,1,1
+function nFibonacci(n) {
+  // 0, 1 => 1
+  // n + n = n
+  if(n < 2) return n
+
+  return nFibonacci(n - 1) + nFibonacci(n - 2);
+}
+console.log(nFibonacci(9));
+
+console.clear();
+
+
+
+
+
+
+
+
+let obj = {
+  nombre: "joaquin",
+  ape: "carrera",
+  casa: 02
+}
+
+console.log(Object.keys(obj).includes("nombre"));
+
+const q = new Queue
+console.log(q)
