@@ -1,5 +1,8 @@
 //Errores
 
+const { serialize } = require("v8");
+const { createBrotliCompress } = require("zlib");
+
 //Tiene una sintaxis como if else, Es una estructura que nos va a permitir evaluar ciertas fracciones de codigo, si llega a ocurrir un error en el codigo, se va a capturar en el catch. Posee la siguiente sintaxis
 
 //Cuando catch captura un error en try, corta el proceso de lectura en el punto donde esta el error y no deja que siga corriendo el programa, es como un return,
@@ -517,6 +520,3 @@ export const exportandoUnObjeto = {
 //El export default se realiza una vez declarado y asignado los valores, debajo de lo que queremos exportar
 export default exportandoUnObjeto;
 */
-
-
-

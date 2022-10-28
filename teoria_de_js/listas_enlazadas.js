@@ -95,20 +95,22 @@ function Node(value) {
   this.value = value;
   this.next = null;
 }
-//Cuando nosotros llamamos a este metodo, lo que va a hacer es primero identifica si 
+//Cuando nosotros llamamos a este metodo, lo que va a hacer es primero identifica si
 //this.head de List tiene algo, osea si posee un vagon, si no lo posee, se lo asigna con el primero valor que mandamos nosotros.
 List.prototype.add = function (value) {
   const newNode = new Node(value);
-  if(this.head === null) this.head = newNode; //el head ahora va a ser una vagon, que va a ser "vagon 1"
-  else{//Como en this.head, ya esta ocupado, osea ya tiene un objeto adentro, metete en el next de ese objeto
-    this.head.next = newNode; 
+  if (this.head === null)
+    this.head =
+      newNode; //el head ahora va a ser una vagon, que va a ser "vagon 1"
+  else {
+    //Como en this.head, ya esta ocupado, osea ya tiene un objeto adentro, metete en el next de ese objeto
+    this.head.next = newNode;
     //si aca yo le asigno varios valores a ese next, siempre se va a esta pisando y asignando nuevos valores, y no va a llegar mas alla de ese mismo next, por lo que este codigo esta mal
-
   }
 };
 
 list.add("vagon 1"); //va a añadir al head el vagon 1 osea head = {value: "vagon 1", next: null}
-list.add("vagon 2");//como el head ya esta con el vagon uno, va a entrar en el vagon1 y va a buscar la propiedad next de ese vagon y le va a asignar un nuevo vagon. => 
+list.add("vagon 2"); //como el head ya esta con el vagon uno, va a entrar en el vagon1 y va a buscar la propiedad next de ese vagon y le va a asignar un nuevo vagon. =>
 /*head = {
   value: "vagon 1", 
   next: {
@@ -118,7 +120,6 @@ list.add("vagon 2");//como el head ya esta con el vagon uno, va a entrar en el v
 }*/
 
 list.add("vagon 3"); //Si yo le asigno este valor, no se va a meter al next del segundo vagon, lo que va a hacer va a tener el mismo funcionamiento que arriba, por lo que va a pisar ese vagon y lo va a reescribir.
-
 
 console.clear();
 //===============================================================================
@@ -146,32 +147,34 @@ List.prototype.add = function (value) {
 };
 */
 
-
-
 List.prototype.add = function (value) {
   const newNode = new Node(value);
-  if(!this.head) this.head = newNode; //si head no es null, se va a meter un objeto dentro de  head = {value:"primero" ,next: null}
-    else{ //si head = {value:"primero" ,next: null}
-      let current = this.head; //current = {value:"primero", next: null}
-      while(current.next){ //si next es igual a otro objeto, se inicia el bucle.
-      current = current.next //reasignamos current y decimos current = {}
-      }
-      current.next = newNode //se mete al next del current que le asigno en el bucle y le asigna un nuevo Node
-      //aca vamos a quedarnos con el next igaul a otro objeto con otro valor, y con otro next que va a ser null, y volvemos a hacer el bucle al llamar devuelta al metodo.
+  if (!this.head)
+    this.head =
+      newNode; //si head no es null, se va a meter un objeto dentro de  head = {value:"primero" ,next: null}
+  else {
+    //si head = {value:"primero" ,next: null}
+    let current = this.head; //current = {value:"primero", next: null}
+    while (current.next) {
+      //si next es igual a otro objeto, se inicia el bucle.
+      current = current.next; //reasignamos current y decimos current = {}
+    }
+    current.next = newNode; //se mete al next del current que le asigno en el bucle y le asigna un nuevo Node
+    //aca vamos a quedarnos con el next igaul a otro objeto con otro valor, y con otro next que va a ser null, y volvemos a hacer el bucle al llamar devuelta al metodo.
   }
 };
-let list2 = new List()
-list2.add(20)
-list2.add(30)
-list2.add(40)
-list2.add(50)
-list2.add(60)
+let list2 = new List();
+list2.add(20);
+list2.add(30);
+list2.add(40);
+list2.add(50);
+list2.add(60);
 console.log(list2.head);
 
 console.clear();
 
 //==============================================================================================================================
-//Listas dobles enlazadas, se pueden recorrer hacia un lado y hacia el otro lado 
+//Listas dobles enlazadas, se pueden recorrer hacia un lado y hacia el otro lado
 
 function List() {
   this.head = null;
@@ -183,26 +186,61 @@ function Node(value) {
 }
 
 List.prototype.add = function (value) {
-      const newNode = new Node(value);
-      let cont = 0;
-  if(!this.head) {
+  const newNode = new Node(value);
+  let cont = 0;
+  if (!this.head) {
     this.head = newNode;
   } //en el caso del head, no va a existir nunca un previus
-      else{ 
-      let current = this.head;  
-      while(current.next){ 
-      cont++
-      current = current.next 
-      }//pero en el caso de que creemos ya un objeto dentro de otro, ya podemos acceder al anterior
-      newNode.previous = current;
-      current.next = newNode 
-      return cont
+  else {
+    let current = this.head;
+    while (current.next) {
+      cont++;
+      current = current.next;
+    } //pero en el caso de que creemos ya un objeto dentro de otro, ya podemos acceder al anterior
+    newNode.previous = current;
+    current.next = newNode;
+    return cont;
   }
 };
-let list3 = new List()
+let list3 = new List();
 console.log(list3.add("primero"));
 console.log(list3.add("segundo"));
 console.log(list3.add("tercero"));
 console.log(list3.add("cuarto"));
 
+//===============================================================================================
+//metodo buscar.
 
+
+
+function calculadora(){
+  let x = 10
+  function sume(){
+    return x = x + 1
+  }
+  function resta (){
+    return x--
+  }
+
+  return {
+    sume,
+    resta
+  }
+}
+
+
+const suma = calculadora().sume
+console.log(suma());
+console.log(suma());
+console.log(suma());
+
+const reste = calculadora().resta
+console.log(reste());
+console.log(reste());
+console.log(reste());
+
+
+
+
+let y = [4, 5, 6, 7, 8, 9, 10];
+console.log(y.shift());
