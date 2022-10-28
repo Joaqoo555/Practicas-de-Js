@@ -21,7 +21,9 @@ let array = Object.entries(objeto);
 console.log(array)
 */
 
-const { Queue } = require("../FT-M1/04-EstructuraDeDatos-I/homework/homework");
+//const { LinkedList } = require("../FT-M1/05-EstructuraDeDatos-II/homework/homework");
+
+//const { Queue } = require("../FT-M1/04-EstructuraDeDatos-I/homework/homework");
 
 //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece
 //en formato par clave-valor.
@@ -146,32 +148,175 @@ function nFactorial(n) {
 }
 console.log(nFactorial(5));
 */
-//0,1,1
-function nFibonacci(n) {
-  // 0, 1 => 1
-  // n + n = n
-  if(n < 2) return n
 
-  return nFibonacci(n - 1) + nFibonacci(n - 2);
+/*
+function LinkedList() {
+    this.head = null;
+  }
+  
+  function Node(value) {
+    this.value = value;
+    this.next = null;
+    this.previous = null
+  }
+  
+  LinkedList.prototype.add = function(value){
+    const newNode = new Node(value)
+    if(!this.head) this.head = newNode;
+    else{
+      let current = this.head;
+      while(current.next){
+        current = current.next;
+      }
+      newNode.previous = current
+      current.next = newNode;
+    }
+  }
+  LinkedList.prototype.remove = function(){
+    let current = this.head.next;
+
 }
-console.log(nFibonacci(9));
+  LinkedList.prototype.search = function(value){
+    if(typeof value == "function"){
+      if(this.head.value === value) return true;
+      return false
+    }else{
+      if(this.head.value === value) return true;
+      return false;
+    }
+  
+  }
+  
+  const list1 = new LinkedList()
+  list1.add("valor numero 1")
+  list1.add("valor numero 2")
+  console.log(list1);
+  list1.remove()
+  list1.remove()
+  list1.remove()
+  console.log(list1, "removi el utimmo?");
+ */
+  function LinkedList() {
+    this._length = 0;
+    this.head = null;
+  }
+  
+  function Node(value) {
+    this.value = value;
+    this.next = null;
+  }
+  //ademas de añadir los nodos, tambien te retorna cada valor del nodo individual
+  LinkedList.prototype.add = function(value){
+// {    const newNode = new Node(value)
+//     if(!this.head) {
+//       this._length++
+//       this.head = newNode;
+//       return newNode;
+//     }
+//     else{
+//       let current = this.head;
+//       while(current.next){
+//         current = current.next;
+//       }
+//       this._length++
+//       current.next = newNode;
+//       return newNode;
+//     }}
+    let node = new Node(value);
+    let current = this.head;
+    if(!current){
+      this.head = node
+      this._length++
+      return node
+    }
+    while(current.next){
+      current = current.next;
+    }
+    current.next = node;
+    this._length++
+    return node
+  }
 
-console.clear();
 
-
-
-
-
-
-
-
-let obj = {
-  nombre: "joaquin",
-  ape: "carrera",
-  casa: 02
+LinkedList.prototype.remove = function(){
+// {
+//   if(!this.head){
+//     this._length = 0;
+//     return this.head
+//   }else{
+//     let current = this.head; 
+//     while(current.next !== null){
+//     current = current.next
+//     }
+//     this._length--
+//     let currentR = current
+//     return currentR;
+//   }}
+  let current = this.head;
+  if(!current) {return null;}
+  if(!current.next){
+    let previus = current.value;
+    this.head = null
+    return previus
+  }
+  let vuelta = null;
+  while(current.next){
+    if(current.next.next === null){
+      vuelta = current.next.value;
+      current.next = null;
+      break
+    }
+    current = current.next;
+  }return vuelta;
 }
 
-console.log(Object.keys(obj).includes("nombre"));
 
-const q = new Queue
-console.log(q)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // LinkedList.prototype.search = function(value){
+  //   if(typeof value === "function"){
+  //     if(this.head.value === value) return value();
+  //     let current = this.head;
+  //     while(current.next !== null){
+  //       if(current.next.value === value) return value;
+  //       current = current.next
+  //     }
+  //     return null
+  //   }else{
+  //     if(this.head.value === value) return value;
+  //     let current = this.head;
+  //     while(current.next !== null){
+  //       if(current.next.value === value) return value;
+  //       current = current.next
+  //     }
+  //     return null
+  //   }
+  // }
+
+
+const newList = new LinkedList();
+newList.add("primero")
+newList.add("primero")
+
+newList.remove()
+
+console.log(newList);
